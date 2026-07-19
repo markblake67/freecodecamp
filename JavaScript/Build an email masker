@@ -1,0 +1,18 @@
+let email = "testtest@test.com"
+
+// test getting last email console.log(email.indexOf("@") - 1)
+//repeat()
+
+//more tests to get the first character. console.log(email.slice(0, 1))
+
+
+function maskEmail(email) {
+  let lastChar = email.indexOf("@") - 1 //gets index of last character - 1 (before @)
+  let firstChar = email.slice(0, 1) //gets the first character to append back on to the final string
+  let aster = lastChar - 1//a way to get the count for the asterisks
+  let end = email.slice(lastChar) //get the end of the email to append back on at the end.
+  let mask = firstChar  + "*".repeat(aster) + end;
+  return mask
+}
+
+console.log(maskEmail(email))
