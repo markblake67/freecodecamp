@@ -1,0 +1,12 @@
+function booWho(boo) {
+  if (boo === true|| boo === false) { //added boo === false to account for weird booWho false = true
+    return true;
+  } else {
+    return false;
+  }
+} 
+
+/*originally tried: 
+function booWho(boo) {
+  return boo === true ? true : false
+}*/
