@@ -1,0 +1,22 @@
+/*function truncateString(string, num) {
+  let lastLetter = string.slice(-1)
+  let index = string.lastIndexOf(lastLetter)
+  if (index > num) {
+    let sliceString = string.slice(0, num)
+    return sliceString + "..."
+  } else {
+    return string
+  }
+}
+
+console.log(truncateString("-", 2)) Attempt 1 without string.length*/
+
+function truncateString(string, num) {
+  if (string.length > num) {
+    return string.slice(0, num) + "...";
+  }
+  return string
+}
+
+
+console.log(truncateString("A-", 1))
