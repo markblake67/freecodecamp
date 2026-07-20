@@ -1,0 +1,29 @@
+let count = 0;
+function cardCounter(card) {
+  
+  const cardS = String(card).toLowerCase();//originally didn't convert to string, was causing issues 
+
+  if (cardS == 2 ||
+   cardS == 3 ||
+    cardS == 4 ||
+    cardS == 5 ||
+    cardS == 6) 
+  {
+    count++
+  } else if (cardS == 10 || 
+  cardS == "j" || 
+  cardS == "q" || 
+  cardS == "k" || 
+  cardS == "a") 
+  { count--
+  }
+  
+  if (count > 0) {
+    return count + " Bet"
+  } else if (count <= 0) {
+    return count + " Hold"
+  }
+}
+
+
+
