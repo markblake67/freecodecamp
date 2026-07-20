@@ -1,0 +1,36 @@
+function confirmEnding(stringOne, stringCheck) { 
+  const startIndex = stringOne.length - stringCheck.length; //gets the index of the last word from the legnth of the first string - the length of the string check
+  let lastSentence = stringOne.slice(startIndex) //slices the last word off probably could merge with start index variable
+  if (lastSentence === stringCheck) {
+    return true
+  }
+  return false
+}
+  
+console.log(confirmEnding("Bastian", "n"))
+
+
+/*Checked out of curiousity what AI said and got this: 
+function confirmEnding(stringOne, stringCheck) { 
+  const startIndex = stringOne.length - stringCheck.length;
+  return startIndex >= 0 && stringOne.slice(startIndex) === stringCheck;
+} */
+
+
+//attempt 2
+  /*if (stringOne.slice(startIndex) == stringOne.includes(stringCheck)) {
+    return true
+  }
+  return false*/
+
+
+//beginning of attempt 1
+/*  if (stringOne.includes(stringCheck)) {
+    return true
+    if (stringOne.lastIndexOf(stringCheck)) {
+      return true
+    }
+  }
+  return false
+}*/
+
