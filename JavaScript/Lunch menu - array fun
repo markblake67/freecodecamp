@@ -1,0 +1,83 @@
+let lunches = []
+
+function addLunchToEnd(arr, str) {
+  arr.push(str);
+  console.log(`${str} added to the end of the lunch menu.`)
+  return arr
+}
+
+function addLunchToStart(arr, str) {
+  arr.unshift(str);
+  console.log(`${str} added to the start of the lunch menu.`)
+  return arr
+}
+
+function removeLastLunch(arrTwo) {
+  let last = arrTwo.pop()
+  if (arrTwo.length > 0) {
+    console.log(`${last} removed from the end of the lunch menu.`)
+  } else {
+    console.log("No lunches to remove.")
+  }
+  return arrTwo
+}
+
+function removeFirstLunch(remFirst) {
+  let first = remFirst.shift()
+  if (remFirst.length > 0) {
+    console.log(`${first} removed from the start of the lunch menu.`)
+  } else {
+    console.log("No lunches to remove.")
+  }
+  return remFirst
+}
+
+function getRandomLunch(arrRand) {
+  let length = arrRand.length;
+  let randNum = Math.floor(Math.random() * length);
+  if (length === 0) {
+    console.log("No lunches available.");
+  } else {
+    console.log("Randomly selected lunch: " + arrRand[randNum]);
+  }
+}
+
+function showLunchMenu(menu) {
+  if (menu.length > 0) {
+    console.log(`Menu items: ${menu.join(", ")}`)
+  } else {
+    console.log("The menu is empty.")
+  }
+}
+
+/* Does all this: 
+Passed:1. You should declare a variable lunches and assign it an empty array to store the lunch items.
+Passed:2. You should define a function addLunchToEnd.
+Passed:3. The function addLunchToEnd should have two parameters.
+Passed:4. addLunchToEnd(lunches, "Tacos") should log the string "Tacos added to the end of the lunch menu." to the console.
+Passed:5. addLunchToEnd(["Pizza", "Tacos"], "Burger") should return ["Pizza", "Tacos", "Burger"].
+Passed:6. You should define a function addLunchToStart.
+Passed:7. The function addLunchToStart should have two parameters.
+Passed:8. addLunchToStart(lunches, "Sushi") should log the string "Sushi added to the start of the lunch menu." to the console.
+Passed:9. addLunchToStart(["Burger", "Sushi"], "Pizza") should return ["Pizza", "Burger", "Sushi"].
+Passed:10. You should define a function removeLastLunch.
+Passed:11. The function removeLastLunch should have one parameter.
+Passed:12. When the input array is empty, the function removeLastLunch should log the string "No lunches to remove." to the console.
+Passed:13. removeLastLunch(["Stew", "Soup", "Toast"]) should log the string "Toast removed from the end of the lunch menu." to the console.
+Passed:14. removeLastLunch(["Sushi", "Pizza", "Noodles"]) should return ["Sushi", "Pizza"].
+Passed:15. You should define a function removeFirstLunch.
+Passed:16. The function removeFirstLunch should have a single parameter.
+Passed:17. When the input array is empty, the function removeFirstLunch should log the string "No lunches to remove." to the console.
+Passed:18. removeFirstLunch(["Salad", "Eggs", "Cheese"]) should log the string "Salad removed from the start of the lunch menu." to the console.
+Passed:19. removeFirstLunch(["Sushi", "Pizza", "Burger"]) should return ["Pizza", "Burger"].
+Passed:20. addLunchToEnd, addLunchToStart, removeLastLunch, and removeFirstLunch should return the same array passed as an argument after updating it.
+Passed:21. You should define a function getRandomLunch.
+Passed:22. The function getRandomLunch should have a single parameter.
+Passed:23. When the input array is empty, the function getRandomLunch should log the string "No lunches available." to the console.
+Passed:24. When the input array is not empty, the function getRandomLunch should log a string in the format Randomly selected lunch: [Lunch Item] to the console.
+Passed:25. The getRandomLunch function should not change the array passed to it as argument.
+Passed:26. You should define a function showLunchMenu.
+Passed:27. The function showLunchMenu should have a single parameter.
+Passed:28. When the input array is empty, the function showLunchMenu should log the string "The menu is empty." to the console.
+Passed:29. showLunchMenu(["Greens", "Corns", "Beans"]) should log "Menu items: Greens, Corns, Beans" to the console.
+Passed:30. showLunchMenu(["Pizza", "Burger", "Fries", "Salad"]) should log "Menu items: Pizza, Burger, Fries, Salad" to the console.*/
