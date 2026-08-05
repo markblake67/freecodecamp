@@ -60,8 +60,7 @@ let validateManifest = (manifest) => {
   {blank.hazmat = "Invalid"}
   
   return blank
-
-}
+} //checks the entries to the manifest are in the right format against the specified allowed formats
 
 
 let processManifest = (manifest) => {
@@ -70,7 +69,7 @@ let processManifest = (manifest) => {
   let validation = validateManifest(manifest)
 
   if (
-      Object.keys(validation).length === 0
+      Object.keys(validation).length === 0 //if validation object is empty (equal to 0), there are no problems with the manifest.
   )
     {
     console.log(`Validation success: ${manifest.containerId}`)
@@ -82,7 +81,7 @@ let processManifest = (manifest) => {
     console.log(validation)
   }
 
-}
+}//returns a processed manifest.
 
 
 
