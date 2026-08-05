@@ -1,0 +1,10 @@
+const normalizeUnits = (manifest) => {
+  let copy = { ...manifest}
+  if (copy.unit === "lb") {
+    copy.unit = "kg";
+    copy.weight *= 0.45;
+  }
+  return copy
+}
+
+
